@@ -8,9 +8,9 @@ leaf_perception:
     debug_image_topic: /perception/debug_image
     debug_confidence_threshold: 0.1
     debug_image_republish_period_s: 1.0
-    model_path: /home/user/workspace/lwx/perception/runs/leaf_seg-2/weights/best.pt
+    model_path: leaf_seg-2/weights/best.pt
     target_label: leaf
-    confidence_threshold: 0.1
+    confidence_threshold: 0.2
     iou_threshold: 0.5
     image_size: 640
     inference_device: cpu
