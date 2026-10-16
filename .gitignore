@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+artifacts/
+config/hardware.yaml
+config/hardware.urdf
+config/*.unmatched.urdf

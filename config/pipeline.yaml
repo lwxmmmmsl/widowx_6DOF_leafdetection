@@ -1,0 +1,55 @@
+leaf_perception:
+  ros__parameters:
+    color_topic: /rgb/image_raw
+    depth_topic: /depth_to_rgb/image_raw
+    camera_info_topic: /depth_to_rgb/camera_info
+    detections_topic: /perception/leaves
+    debug_camera_image_topic: /perception/debug_camera_image
+    debug_image_topic: /perception/debug_image
+    debug_confidence_threshold: 0.1
+    debug_image_republish_period_s: 1.0
+    model_path: /home/user/workspace/lwx/perception/runs/leaf_seg-2/weights/best.pt
+    target_label: leaf
+    confidence_threshold: 0.1
+    iou_threshold: 0.5
+    image_size: 640
+    inference_device: cpu
+    min_depth_m: 0.12
+    max_depth_m: 1.5
+    min_points: 80
+    point_stride: 2
+    sync_slop_s: 0.08
+    debug_enabled: true
+
+leaf_control:
+  ros__parameters:
+    # 仿真适配层参数：法向先变换到基座，再投影到 YZ 平面。
+    project_normal_to_base_yz: true
+    # 总姿态旋转角容差；0 禁用邻近姿态搜索，保留原数值 IK 精度。
+    orientation_tolerance_deg: 15.0
+    orientation_search_step_deg: 5.0
+    detections_topic: /perception/leaves
+    base_frame: wx250s/base_link
+    transform_timeout_s: 2.0
+    target_count: 3
+    approach_distance_m: 0.08
+    tool_clearance_radius_m: 0.035
+    gripper_hold_s: 3.0
+    dry_run: true
+    robot_model: wx250s
+    robot_name: wx250s
+    moving_time_s: 2.0
+    accel_time_s: 0.3
+    debug_start_position_m: [0.25, 0.0, 0.25]
+    target_shortfall_topic: /control/target_shortfall
+
+leaf_workflow:
+  ros__parameters:
+    detections_topic: /perception/leaves
+    status_topic: /workflow/status
+    auto_start: true
+    start_delay_s: 2.0
+    camera_retry_period_s: 0.5
+    max_camera_retries: 30
+    perception_service: /perception/detect
+    control_service: /control/measure

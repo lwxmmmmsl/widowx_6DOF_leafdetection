@@ -1,0 +1,19 @@
+{
+  "sources": {
+    "real_project": "/home/user/workspace/lwx/wodowx_control",
+    "isaac_python": "/home/user/anaconda3/envs/env_isaaclab/bin/python",
+    "perception_python": "/home/user/anaconda3/envs/env_perception/bin/python",
+    "plant": "/home/user/下载/tomato_plant.glb",
+    "model": "/home/user/workspace/lwx/perception/runs/leaf_seg-2/weights/best.pt",
+    "urdf_xacro": "/home/user/interbotix_ws/src/interbotix_ros_manipulators/interbotix_ros_xsarms/interbotix_xsarm_descriptions/urdf/wx250s.urdf.xacro"
+  },
+  "created": "2026-10-12T14:15:21.247475",
+  "source_sha256": {
+    "plant": "de75082a7e83c12696ea5ed48c2104da43f1e3dedb961d22831329dd0030360a",
+    "model": "1be2421c33000c07212a389313fd8487946a0dd371570174c6979acefed250a9",
+    "urdf_xacro": "b7a7ec26572ee17f6670a244c10ff7fcbdc3d35b8ec9bfbca178541219870586"
+  },
+  "gpu_execution_verified": true,
+  "camera_calibration": "requires capture_real; demo is explicitly uncalibrated",
+  "gpu_verification_scope": "Headless GPU startup, initial limits, RGB-D and exit; full measurement workflow not tested"
+}

@@ -1,0 +1,16 @@
+{
+  "wx250s/base_link": "wx250s_base_link",
+  "wx250s/shoulder_link": "wx250s_shoulder_link",
+  "wx250s/upper_arm_link": "wx250s_upper_arm_link",
+  "wx250s/upper_forearm_link": "wx250s_upper_forearm_link",
+  "wx250s/lower_forearm_link": "wx250s_lower_forearm_link",
+  "wx250s/wrist_link": "wx250s_wrist_link",
+  "wx250s/gripper_link": "wx250s_gripper_link",
+  "wx250s/ee_arm_link": "wx250s_ee_arm_link",
+  "wx250s/gripper_prop_link": "wx250s_gripper_prop_link",
+  "wx250s/gripper_bar_link": "wx250s_gripper_bar_link",
+  "wx250s/fingers_link": "wx250s_fingers_link",
+  "wx250s/left_finger_link": "wx250s_left_finger_link",
+  "wx250s/right_finger_link": "wx250s_right_finger_link",
+  "wx250s/ee_gripper_link": "wx250s_ee_gripper_link"
+}

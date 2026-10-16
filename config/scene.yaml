@@ -1,0 +1,21 @@
+# Simulation-only settings, not physical camera calibration or Dynamixel gains.
+# 仅调整仿真初值，hardware.yaml 的实测值和 URDF 限位始终保持原样。
+# clamp：越界值投影到合法区间并打印 initial_joint_adjusted；strict：越界即报错。
+initial_joint_policy: clamp
+physics_dt: 0.008333333333333333
+camera_fps: 10
+arm_stiffness: 200.0
+arm_damping: 20.0
+finger_stiffness: 400.0
+finger_damping: 20.0
+joint_tolerance_rad: 0.03
+finger_tolerance_m: 0.001
+motion_settle_timeout_s: 5.0
+plant:
+  asset: assets/tomato_plant.glb
+  source: /home/user/下载/tomato_plant.glb
+  # Original model bounds: X[-102.4,105.1], Y[-.11,311.99], Z[-85.59,90.81].
+  # Explicit provisional scale, NOT a measured real plant size. Y-up -> Z-up.
+  scale: [0.001, 0.001, 0.001]
+  quaternion_wxyz: [0.7071067811865476, 0.7071067811865476, 0.0, 0.0]
+  position_m: [0.35, 0.1, 0.02]
